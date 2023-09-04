@@ -2,7 +2,7 @@ package lists;
 
 public class HomeworkOne {
     public static void main(String[] args) {
-        UnorderedList a = new UnorderedList(5);
+        OrderedList a = new OrderedList(5);
 
         System.out.println(a.isEmpty());
         a.delete(5);
