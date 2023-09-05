@@ -1,22 +1,36 @@
 package lists;
 
+import java.util.Random;
+
 public class HomeworkOne {
     public static void main(String[] args) {
+        Random rand = new Random();
+        int upperBound = 500;
+
         OrderedList a = new OrderedList(5);
+        OrderedList b = new OrderedList(10);
+        OrderedList c;
 
-        System.out.println(a.isEmpty());
-        a.delete(5);
-        a.insert(4);
-        a.insert(9);
-        a.insert(6);
-        a.insert(2);
+        for (int rn = 0; rn < 5; rn++) {
+            a.insert(rand.nextInt(upperBound));
+        }
+
+        System.out.println("ORDERED ARRAY 1 -");
         a.display();
+        System.out.println();
 
-        System.out.println("-------");
+        for (int rn = 0; rn < 10; rn++) {
+            b.insert(rand.nextInt(upperBound));
+        }
 
-        a.delete(9);
-        a.insert(1);
-        a.delete(4);
-        a.display();
+        System.out.println("ORDERED ARRAY 2 -");
+        b.display();
+        System.out.println();
+
+        c = a.merge(b);
+
+        System.out.println("MERGED ARRAY -");
+        c.display();
+        System.out.println();
     }
 }

@@ -3,9 +3,29 @@ package lists;
 public class OrderedList {
     private int[] store;
     private int currIdx = 0;
+    private int currPtr = 0;
 
     public OrderedList(int size) {
         this.store = new int[size];
+    }
+
+    public int getSize() {
+        return currIdx;
+    }
+
+    public int getNext() {
+        if (!isEmpty()) {
+            int temp = currPtr;
+            currPtr = (currPtr + 1) % currIdx;
+
+            return store[temp];
+        }
+        System.out.println("Array is currently empty; please add values first");
+        return -1;
+    }
+
+    public void resetPtr() {
+        currPtr = 0;
     }
 
     public boolean isEmpty() {
@@ -92,5 +112,20 @@ public class OrderedList {
         }
 
         System.out.print("\n");
+    }
+
+    public OrderedList merge(OrderedList secondList) {
+        int newSize = currIdx + secondList.getSize();
+        OrderedList resList = new OrderedList(newSize);
+
+        for (int i = 0; i < currIdx; i++) {
+            resList.insert(getNext());
+        }
+
+        for (int i = 0; i < secondList.getSize(); i++) {
+            resList.insert(secondList.getNext());
+        }
+
+        return resList;
     }
 }
