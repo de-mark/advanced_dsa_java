@@ -34,16 +34,26 @@ public class ArrayQueue {
         }
     }
 
-    public void delete() {
+    // Typically, the delete method will return the index of the item deleted, the
+    // item itself, or a true or false
+    // It's typically not void return
+    public int delete() {
         if (!isEmpty()) {
+            int temp = store[front];
+
             if (front == store.length - 1) {
                 front = -1;
             }
             front++;
             numItems--;
+            return temp;
         } else {
             System.out.println("Error: Empty queue");
+            return -1;
         }
+    }
 
+    public int peek() {
+        return store[front];
     }
 }
