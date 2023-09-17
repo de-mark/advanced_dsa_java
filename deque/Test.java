@@ -84,6 +84,12 @@ public class Test {
         System.out.println(s.pop());
         System.out.println("Popping when empty");
         System.out.println(s.peek());
+        s.push(100);
+        System.out.println("Added 100 to empty stack");
+        System.out.println(s.peek());
+        s.push(200);
+        System.out.println("Added 200 to stack");
+        System.out.println(s.peek());
     }
 
 }
