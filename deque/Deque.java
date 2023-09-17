@@ -55,7 +55,7 @@ public class Deque {
 
     public int deleteLeft() {
         if (!isEmpty()) {
-            int deletedItem = store[left];
+            int deletedItem = store[wrapRight(left)];
             left = wrapRight(left);
             numItems--;
             return deletedItem;
@@ -67,7 +67,7 @@ public class Deque {
 
     public int deleteRight() {
         if (!isEmpty()) {
-            int deletedItem = store[right];
+            int deletedItem = store[wrapLeft(right)];
             right = wrapLeft(right);
             numItems--;
             return deletedItem;
@@ -79,7 +79,7 @@ public class Deque {
 
     public int peekLeft() {
         if (!isEmpty()) {
-            return store[left];
+            return store[wrapRight(left)];
         } else {
             System.out.println("Error - Deque is empty; add before peeking");
             return -1;
@@ -88,20 +88,10 @@ public class Deque {
 
     public int peekRight() {
         if (!isEmpty()) {
-            return store[right];
+            return store[wrapLeft(right)];
         } else {
             System.out.println("Error - Deque is empty; add before peeking");
             return -1;
         }
-    }
-
-    public void TEMPDISPLAY() {
-        System.out.printf("LEFT - %d :: RIGHT - %d\n", left, right);
-
-        for (int i = 0; i < store.length - 1; i++) {
-            System.out.printf("%d, ", store[i]);
-        }
-
-        System.out.println(store[store.length - 1]);
     }
 }
