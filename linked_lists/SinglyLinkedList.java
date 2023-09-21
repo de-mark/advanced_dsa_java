@@ -11,6 +11,10 @@ public class SinglyLinkedList {
         return head == null;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
     // Only happens if the list is empty
     public void insertFirst(int data) {
         Node newNode = new Node(data);
@@ -67,6 +71,14 @@ public class SinglyLinkedList {
     }
 
     // We'll add display method in next class
+    public void display() {
+        Node curr = head;
+
+        while (curr != null) {
+            System.out.printf("%d -> ", curr.getData());
+            curr = curr.getNext();
+        }
+    }
     // That and double-ended linked list
     // Also doubly linked list
 }
