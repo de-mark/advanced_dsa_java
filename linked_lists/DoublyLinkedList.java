@@ -112,4 +112,29 @@ public class DoublyLinkedList {
             curr.setNext(newNode);
         }
     }
+
+    public DLNode delete(int key) {
+        DLNode curr = head;
+
+        while (curr.getData() != key) {
+            curr = curr.getNext();
+
+            if (curr == null) {
+                return null;
+            }
+        }
+
+        if (curr == head) {
+            head = head.getNext();
+            head.setPrev(null);
+        } else if (curr == tail) {
+            tail = tail.getPrev();
+            tail.setNext(null);
+        } else {
+            curr.getPrev().setNext(curr.getNext());
+            curr.getNext().setPrev(curr.getPrev());
+        }
+
+        return curr;
+    }
 }

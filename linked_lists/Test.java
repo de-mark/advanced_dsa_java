@@ -2,13 +2,11 @@ package linked_lists;
 
 public class Test {
     public static void main(String[] args) {
-        SinglyLinkedList l = new SinglyLinkedList();
+        DoublyLinkedList dl = new DoublyLinkedList();
 
-        l.insertFirst(12);
-        l.insertFirst(13);
-        l.insertFirst(14);
-        l.display();
-        l.deleteFirst();
-        l.display();
+        dl.insertFirst(13);
+        dl.insertLast(15);
+        dl.insertAfter(13, 14);
+        dl.displayForward();
     }
 }
