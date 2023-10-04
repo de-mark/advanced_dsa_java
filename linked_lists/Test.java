@@ -8,5 +8,9 @@ public class Test {
         dl.insertLast(15);
         dl.insertAfter(13, 14);
         dl.displayForward();
+        dl.deleteFirst();
+        dl.deleteLast();
+        dl.delete(14);
+        dl.displayForward();
     }
 }

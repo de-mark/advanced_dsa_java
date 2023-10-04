@@ -15,6 +15,14 @@ public class SinglyLinkedList {
         return head;
     }
 
+    // Linked list = new LinkedList();
+    // ListIterator iter1 = list.getIterator();
+    // Node n = iter1.getCurrent();
+    // iter1.nextNode();
+    public ListIterator getIterator() {
+        return new ListIterator(this);
+    }
+
     // Only happens if the list is empty
     public void insertFirst(int data) {
         Node newNode = new Node(data);
