@@ -14,4 +14,4 @@ The circular list should have a step() method that moves current along to the ne
 
 ## COMPLETION SCREENSHOT
 
-![Ordered List Merge HW](../screenshots/ordered_list_merge_hw.png)
+![Circular Linked List HW](../screenshots/circular_linked_list-test.png)
