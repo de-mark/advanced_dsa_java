@@ -39,5 +39,20 @@ public class HomeworkThree {
         circ.insert(300);
         System.out.println("------------");
         circ.display();
+        System.out.println("------------");
+        System.out.println("Stepping forward 1");
+        circ.step();
+        System.out.println("------------");
+        circ.display();
+        System.out.println("------------");
+        System.out.println("Stepping forward 1");
+        circ.step();
+        System.out.println("------------");
+        circ.display();
+        System.out.println("------------");
+        System.out.println("Stepping forward 1");
+        circ.step();
+        System.out.println("------------");
+        circ.display();
     }
 }

@@ -78,6 +78,11 @@ public class CircularLinkedList {
     }
 
     public void step() {
-
+        if (isEmpty() || current.getNext() == null) {
+            System.out.println("Can't step forward since there's not enough items");
+            return;
+        } else {
+            current = current.getNext();
+        }
     }
 }
