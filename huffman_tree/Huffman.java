@@ -195,7 +195,7 @@ public class Huffman {
         System.out.println("DECODED MESSAGE----------------------------");
         System.out.printf("[ORIGINAL MESSAGE] %s\n", originalMessage);
         System.out.printf("[CLEANED MESSAGE] %s\n", cleanedMessage);
-        System.out.printf("[ENCODED MESSAGE] %s\n\n", encodedMessage);
+        System.out.printf("[ENCODED MESSAGE] %s\n", encodedMessage);
         System.out.printf("[DECODED MESSAGE] %s\n\n", decodedMessage);
     }
 }
