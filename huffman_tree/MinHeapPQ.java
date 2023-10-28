@@ -54,7 +54,7 @@ public class MinHeapPQ {
 
     private Tree removeLastElement() {
         numElements--;
-        Tree lastElement = store[numElements];
+        Tree lastElement = elementAt(numElements);
         store[numElements] = null;
         return lastElement;
     }
@@ -155,6 +155,10 @@ public class MinHeapPQ {
         return numElements == 0;
     }
 
+    public int getNumItems() {
+        return numElements;
+    }
+
     public void enqueue(Tree newTree) {
         if (isFull()) {
             System.out.println("Priority Queue is full; please remove items before adding more");
@@ -164,7 +168,7 @@ public class MinHeapPQ {
     }
 
     public Tree dequeue() {
-        Tree res = store[ROOT_IDX];
+        Tree res = elementAtHead();
         Tree lastElem = removeLastElement();
         siftDown(lastElem);
         return res;

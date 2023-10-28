@@ -42,7 +42,12 @@ public class Testing {
 
         Huffman hm = new Huffman();
 
-        hm.encodeMessage("a 72823 suzie says it's 78ea8sy!!!!");
+        hm.encodeMessage("72823 susie says it is 78ea8sy!!!!");
+
         hm.displayFrequencyTable();
+        System.out.println("");
+        hm.displayCodeTable();
+        System.out.println("");
+        hm.displayEncodedMessage();
     }
 }
