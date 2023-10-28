@@ -49,5 +49,6 @@ public class Testing {
         hm.displayCodeTable();
         System.out.println("");
         hm.displayEncodedMessage();
+        hm.decodeMessage();
     }
 }
