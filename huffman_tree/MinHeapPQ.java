@@ -1,6 +1,5 @@
 package huffman_tree;
 
-import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 // When we implement this using an array we basically
