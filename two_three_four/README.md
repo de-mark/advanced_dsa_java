@@ -1,26 +1,19 @@
-# HUFFMAN TREE PROGRAMMING ASSIGNMENT
+# TWO THREE FOUR TREE PROGRAMMING ASSIGNMENT
 
-Huffman encoding seeks to compress data into binary for quicker transmission. It accounts for the fact that different data will have different characters be more common and tries to give the most common characters the smallest binary sequences.
-
-This Huffman encoding was doing using a Priority Queue implemented with array-based MinHeap, a Binary Tree, and arrays for storage (since part of the assignment was avoiding the use of in-built data structures from the library).
+Two Three Four Tree is a self-balancing tree data structure that is easier to program than a Red Black tree. They aren't really in use these days. According to the professor, most programmers prefer to use a Trie data structure for this set of tasks.
 
 
 ## ASSIGNMENT DIRECTIONS
 
-Write a program to implement Huffman encoding and decoding. It should do the following:
+Use the Two Three Four tree provided and write the following:
 
-☑ Accept a text message.
+☑ An in-order traversal method
 
-☑ Create a Huffman tree for this message
+☑ A method that marks nodes deleted (it does not have to actually implement deletion)
 
-☑ Create a code table
 
-☑ Encode the message into binary
-
-☑ Decode the message from binary back to text
-
-You can use String variables to store binary numbers. Don't worry about the actual bit manipulation. Please do not use in-built data structures from the library.
+Please do not use in-built data structures from the library.
 
 ## COMPLETION SCREENSHOT
 
-![Example of Huffman Encoding](../screenshots/huffman_encoding.png)
+![Example of Huffman Encoding](../screenshots/two_three_four_tree.png)
