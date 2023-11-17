@@ -22,21 +22,6 @@ public class TwoThreeFour {
         return index;
     }
 
-    public Node findChild(int key) {
-        Node curr = root;
-        int index = curr.findItem(key);
-        while (index == -1) {
-            curr = getNextChild(curr, key);
-            index = curr.findItem(key);
-
-            if (index != -1)
-                return curr;
-            else if (curr.isLeaf())
-                return null;
-        }
-        return curr;
-    }
-
     public void insert(int item) {
         Node curr = root;
         while (true) {
@@ -110,6 +95,21 @@ public class TwoThreeFour {
     public void inOrderTraversal() {
         System.out.println("RUNNING IN ORDER TRAVERSAL:");
         inOrderHelper(root);
+    }
+
+    public Node findChild(int key) {
+        Node curr = root;
+        int index = curr.findItem(key);
+        while (index == -1) {
+            curr = getNextChild(curr, key);
+            index = curr.findItem(key);
+
+            if (index != -1)
+                return curr;
+            else if (curr.isLeaf())
+                return null;
+        }
+        return curr;
     }
 
     public void delete(int key) {
