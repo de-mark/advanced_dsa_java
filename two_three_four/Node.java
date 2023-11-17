@@ -5,11 +5,17 @@ public class Node {
     Node[] children;
     int numOfItems;
     Node parent;
+    boolean isDeleted;
 
     public Node() {
         data = new int[3];
         children = new Node[4];
         numOfItems = 0;
+        isDeleted = false;
+    }
+
+    public void delete() {
+        isDeleted = true;
     }
 
     public Node getParent() {

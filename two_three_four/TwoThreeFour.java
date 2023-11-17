@@ -13,12 +13,28 @@ public class TwoThreeFour {
         while (index == -1) {
             curr = getNextChild(curr, key);
             index = curr.findItem(key);
+
             if (index != -1)
                 return index;
             else if (curr.isLeaf())
                 return -1;
         }
         return index;
+    }
+
+    public Node findChild(int key) {
+        Node curr = root;
+        int index = curr.findItem(key);
+        while (index == -1) {
+            curr = getNextChild(curr, key);
+            index = curr.findItem(key);
+
+            if (index != -1)
+                return curr;
+            else if (curr.isLeaf())
+                return null;
+        }
+        return curr;
     }
 
     public void insert(int item) {
@@ -75,15 +91,15 @@ public class TwoThreeFour {
             return;
         } else {
             inOrderHelper(currNode.getChild(0));
-            if (currNode.data[0] != 0) {
+            if (currNode.data[0] != 0 & !currNode.isDeleted) {
                 System.out.println(currNode.data[0]);
             }
             inOrderHelper(currNode.getChild(1));
-            if (currNode.data[1] != 0) {
+            if (currNode.data[1] != 0 & !currNode.isDeleted) {
                 System.out.println(currNode.data[1]);
             }
             inOrderHelper(currNode.getChild(2));
-            if (currNode.data[2] != 0) {
+            if (currNode.data[2] != 0 & !currNode.isDeleted) {
                 System.out.println(currNode.data[2]);
             }
             inOrderHelper(currNode.getChild(3));
@@ -94,5 +110,15 @@ public class TwoThreeFour {
     public void inOrderTraversal() {
         System.out.println("RUNNING IN ORDER TRAVERSAL:");
         inOrderHelper(root);
+    }
+
+    public void delete(int key) {
+        int idx = find(key);
+        if (idx != -1) {
+            Node childWithKey = findChild(key);
+            childWithKey.delete();
+        } else {
+            System.out.println("Cannot delete; key not found");
+        }
     }
 }
