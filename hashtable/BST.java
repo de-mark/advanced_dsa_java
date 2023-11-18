@@ -66,7 +66,7 @@ public class BST {
         inorder(root);
     }
 
-    public Node search(int toFind) {
+    public Node find(int toFind) {
         Node curr = root;
 
         while (curr.getId() != toFind) {

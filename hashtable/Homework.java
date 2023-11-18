@@ -14,18 +14,54 @@ public class Homework {
                 "Machine Learning");
         Book naturalLanguage = new Book(150, "Introduction to Natural Language Processing", "Jacob Eisenstein",
                 "Machine Learning");
+        Book hamRadio = new Book(900, "Ham Radio: License Manual", "ARRL", "Radio");
 
-        BST tree = new BST();
-        tree.insert(linuxBible);
-        tree.insert(linuxEmbedded);
-        tree.insert(atmosScience);
-        tree.insert(envScience);
-        tree.insert(astroPhys);
-        tree.insert(rocketScience);
-        tree.insert(electronicsForBeginners);
-        tree.insert(practicalElectronics);
-        tree.insert(machineLearningSysDes);
-        tree.insert(naturalLanguage);
-        tree.inorder();
+        Book deleteMe = new Book(999, "THIS BOOK IS JUST HERE TO BE DELETED", "DELETE ME", "DELETE");
+
+        // BST tree = new BST();
+        // tree.insert(linuxBible);
+        // tree.insert(linuxEmbedded);
+        // tree.insert(atmosScience);
+        // tree.insert(envScience);
+        // tree.insert(astroPhys);
+        // tree.insert(rocketScience);
+        // tree.insert(electronicsForBeginners);
+        // tree.insert(practicalElectronics);
+        // tree.insert(machineLearningSysDes);
+        // tree.insert(naturalLanguage);
+        // tree.inorder();
+        HashTable hash = new HashTable(7);
+        hash.insert(linuxBible);
+        hash.insert(linuxEmbedded);
+        hash.insert(atmosScience);
+        hash.insert(envScience);
+        hash.insert(astroPhys);
+        hash.insert(rocketScience);
+        hash.insert(electronicsForBeginners);
+        hash.insert(practicalElectronics);
+        hash.insert(machineLearningSysDes);
+        hash.insert(naturalLanguage);
+        hash.insert(deleteMe);
+        System.out.println("=====================================================");
+        System.out.println("FIRST PASS: ALL BOOKS INSERTED TO THE HASHTABLE");
+        System.out.println("=====================================================\n\n");
+        hash.display();
+        System.out.println("\n\n\n=====================================================");
+        System.out.println("DELETING DELETE ME BOOK");
+        System.out.println("=====================================================\n\n");
+        hash.delete(deleteMe.getId());
+        hash.display();
+        System.out.println("\n\n\n=====================================================");
+        System.out.println("SEARCHING FOR LINUX BIBLE TO MAKE SURE FIND FN WORKS");
+        System.out.println("=====================================================\n\n");
+        hash.find(linuxBible.getId()).display();
+        System.out.println("\n\n\n=====================================================");
+        System.out.println("INSERTING HAM RADIO BOOK");
+        System.out.println("=====================================================\n\n");
+        hash.insert(hamRadio);
+        hash.display();
+        System.out.println("\n\n\n");
+        System.out.println("=====================================================\n\n");
+
     }
 }
