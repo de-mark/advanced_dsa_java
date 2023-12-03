@@ -74,8 +74,12 @@ public class Node {
 
     public void connectChild(Node child, int index) {
         children[index] = child;
-        if (child != null)
+        if (child != null) {
             child.parent = this;
+        } else {
+            System.out.println("!!!!!!CHILD WAS NULL!!!!!!");
+        }
+
     }
 
     public Node getChild(int index) {
