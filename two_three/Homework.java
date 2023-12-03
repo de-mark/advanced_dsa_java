@@ -25,22 +25,18 @@ public class Homework {
         tree.insert(72);
         System.out.println("INITIAL TREE");
         System.out.println("----------------");
-        tree.inOrderTraversal();
+        tree.display();
         System.out.println("\n----------------\n");
         System.out.println("SEARCHING 20");
         int found20 = tree.find(20);
         displaySearch(found20);
         System.out.println("\n----------------\n");
-        System.out.println("SEARCHING 72");
-        int found72 = tree.find(72);
-        displaySearch(found72);
-        System.out.println("\n----------------\n");
         System.out.println("SEARCHING 82821 (Should return not found without crashing)");
         int found82821 = tree.find(82821);
         displaySearch(found82821);
         System.out.println("\n----------------\n");
-        System.out.println("ADDING 102");
-        tree.insert(102);
-        tree.inOrderTraversal();
+        System.out.println("SEARCHING 72");
+        int found72 = tree.find(72);
+        displaySearch(found72);
     }
 }

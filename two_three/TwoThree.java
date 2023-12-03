@@ -49,25 +49,24 @@ public class TwoThree {
         return idx;
     }
 
-    private void inOrderHelper(Node currNode) {
+    private void displayHelper(Node currNode) {
         if (currNode == null) {
             return;
         } else {
-            inOrderHelper(currNode.getChild(0));
+            displayHelper(currNode.getChild(0));
             if (currNode.getData(0) != 0) {
                 System.out.println(currNode.getData(0));
             }
-            inOrderHelper(currNode.getChild(1));
+            displayHelper(currNode.getChild(1));
             if (currNode.getData(1) != 0) {
                 System.out.println(currNode.getData(1));
             }
-            inOrderHelper(currNode.getChild(2));
+            displayHelper(currNode.getChild(2));
         }
     }
 
-    public void inOrderTraversal() {
-        System.out.println("RUNNING IN ORDER TRAVERSAL:");
-        inOrderHelper(root);
+    public void display() {
+        displayHelper(root);
     }
 
     public void insert(int item) {

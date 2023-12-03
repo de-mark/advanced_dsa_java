@@ -16,4 +16,4 @@ Please do not use in-built data structures from the library.
 
 ## COMPLETION SCREENSHOT
 
-![Example of Huffman Encoding](../screenshots/two_three_four_tree.png)
+![Example of Two-Three-Four Tree](../screenshots/two_three_four_tree.png)
